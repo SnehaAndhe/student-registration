@@ -1,0 +1,6 @@
+/home/shashank/Angular/student-registration/src/main/java/com/registration/student/StudentRegistrationApplication.java
+/home/shashank/Angular/student-registration/src/main/java/com/registration/student/model/Student.java
+/home/shashank/Angular/student-registration/src/main/java/com/registration/student/dao/StudentDao.java
+/home/shashank/Angular/student-registration/src/main/java/com/registration/student/repository/StudentRepository.java
+/home/shashank/Angular/student-registration/src/main/java/com/registration/student/dto/StudentResponse.java
+/home/shashank/Angular/student-registration/src/main/java/com/registration/student/controller/RegistrationController.java
