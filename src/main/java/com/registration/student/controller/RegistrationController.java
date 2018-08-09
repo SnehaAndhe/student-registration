@@ -28,7 +28,8 @@ public class RegistrationController {
 	}
 	
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public Integer addStudent() {
+	public StudentResponse addStudent(Student student) {
+		studentDao.insert(student);
 		return null;
 	}
 	
@@ -40,9 +41,6 @@ public class RegistrationController {
 	@RequestMapping(value = "/id", method = RequestMethod.GET)
 	public StudentResponse getStudentById(Integer id) {
 		StudentResponse response = new StudentResponse();
-		response.setId(1234567890);
-		response.setFirstName("shashank");
-		response.setLastName("kankanala");
 		Student student = studentDao.getById(2);
 		response.setId(student.getId());
 		response.setFirstName(student.getFirstName());
@@ -52,7 +50,7 @@ public class RegistrationController {
 	
 	@RequestMapping(value = "/all", method = RequestMethod.GET)
 	public List<StudentResponse> getAll() {
-		return null;
-		
+		 studentDao.getAll();
+         return null;		
 	}
 }

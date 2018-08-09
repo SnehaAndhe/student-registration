@@ -1,5 +1,7 @@
 package com.registration.student.dao;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,6 +18,18 @@ public class StudentDao {
 	
 	public Student getById(Integer id) {
 		return studentRepo.getOne(id);
+	}
+	
+	public void delete(Integer id) {
+		  studentRepo.delete(id);
+	}
+	
+	public Student insert(Student student) {
+		return studentRepo.save(student);
+	}
+	
+	public List<Student> getAll(){
+		return studentRepo.findAll();
 	}
 
 }
